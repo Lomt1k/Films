@@ -1,0 +1,31 @@
+.custom-radio {
+  &__field {
+    &:checked {
+      ~ .custom-radio__label {
+        background-color: $color-deep-lilac;
+      }
+    }
+  }
+
+  &__label {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: $color-deep-lilac-50;
+    color: $color-white;
+    user-select: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+    height: 100%;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 16px;
+      padding: 7px 14px;
+    }
+  }
+}

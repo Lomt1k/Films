@@ -1,0 +1,38 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ff-exo;
+  font-style: normal;
+  font-weight: 400;
+  color: $color-nero;
+  margin: 0;
+  padding: 0;
+  background-color: $color-ghost-white;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+main {
+  flex-grow: 1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+a {
+  color: $color-nero;
+  text-decoration: none;
+}
+
+textarea {
+  resize: none;
+}

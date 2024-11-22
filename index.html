@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список фильмов</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script src="window-height.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+</head>
+<body>
+  <main>
+    <section class="film-form">
+      <div class="container">
+        <form class="film-form__form">
+          <div class="custom-input">
+            <input class="custom-input__field" type="text" id="title" name="title" required/>
+            <label class="custom-input__label" for="title">Название фильма*</label>
+          </div>
+          <div class="custom-input">
+            <input class="custom-input__field" type="text" id="comment" name="title"/>
+            <label class="custom-input__label" for="comment">Комментарий</label>
+          </div>
+          <div class="film-form__owner">
+            <span class="film-form__owner-text">Кому интересно*</span>
+            <div class="film-form__owner-radios">            
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" type="radio" name="radio-owner" id="radio-owner-she" value="Ей" required>
+                <label class="custom-radio__label" for="radio-owner-she">
+                  <svg width="20" height="20">
+                    <use xlink:href="img/sprite.svg#icon-female"></use>
+                  </svg>
+                  Ей
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" type="radio" name="radio-owner" id="radio-owner-he" value="Ему">
+                <label class="custom-radio__label" for="radio-owner-he">
+                  <svg width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-male"></use>
+                  </svg>
+                  Ему
+                </label>
+              </div>
+              <div class="custom-radio">
+                <input class="custom-radio__field visually-hidden" type="radio" name="radio-owner" id="radio-owner-everyone" value="Обоим">
+                <label class="custom-radio__label" for="radio-owner-everyone">
+                  Обоим
+                </label>
+              </div>
+            </div>
+          </div>
+          <button class="film-form__submit-btn btn" type="submit">Добавить</button>
+        </form>
+        <table class="film-table">
+          <thead class="film-table__head">
+            <tr class="film-table__row">
+              <th class="film-table__heading">
+                <span class="film-table__heading-films">Фильмы</span>
+              </th>
+              <th class="film-table__heading">
+                <div class="film-table__filter-wrapper">
+                  <select class="film-table__filter" name="film-filter">
+                    <option value="">Все</option>
+                    <option value="Ей">Ей</option>
+                    <option value="Ему">Ему</option>
+                    <option value="Обоим">Обоим</option>
+                  </select>
+                </div>
+                <button class="film-table__random-btn btn btn--small" type="button">
+                  <svg width="24" height="24">
+                    <use xlink:href="img/sprite.svg#icon-dice"></use>
+                  </svg>
+                  <span class="btn__label">Выбрать</span>
+                </button>
+              </th>
+              <th class="film-table__heading"></th>
+            </tr>
+          </thead>
+          <tbody class="film-table__body">
+            <!-- Тут будут строки с фильмами -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <a href="/" class="footer__link">Владимир Яшин</a>
+  </footer>
+  <div class="modal">
+    <div class="modal__content">
+      <svg class="modal__icon" width="150" height="150">
+        <use xlink:href="img/sprite.svg#icon-movie"></use>
+      </svg>
+      <span class="modal__label">Предлагаю посмотреть</span>
+      <span class="modal__film-name">Матрица: Революция</span>
+      
+      <button class="modal__ok-btn btn" type="button">Спасибо!</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
